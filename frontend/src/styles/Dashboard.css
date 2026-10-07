@@ -1,0 +1,185 @@
+/* Dashboard.css */
+
+.dashboard-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #1a2634, #2e3b4e); /* Deep navy gradient */
+  margin: 2rem auto;
+  padding: 2rem;
+  color: #e6ecef; /* Soft off-white */
+  max-width: 1200px;
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4); /* Subtle shadow */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.dashboard-container h1,
+.dashboard-container h2,
+.dashboard-container h3 {
+  color: #26a69a; /* Professional teal */
+  text-shadow: 0 0 8px rgba(38, 166, 154, 0.3); /* Subtle teal glow */
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Profile Card Upgrade */
+.profile-section {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.08); /* Light grayish background */
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 0 20px rgba(38, 166, 154, 0.15); /* Subtle teal shadow */
+  transition: all 0.3s ease;
+}
+
+.profile-section:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 30px rgba(38, 166, 154, 0.25); /* Slightly stronger teal shadow */
+}
+
+.profile-icon {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #26a69a, #f4a261); /* Teal to soft gold */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #ffffff; /* White for contrast */
+  margin-right: 2rem;
+  box-shadow: 0 0 20px rgba(38, 166, 154, 0.3); /* Soft teal glow */
+}
+
+.profile-details {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.profile-details p {
+  flex: 1 1 45%;
+  padding: 0.8rem 1rem;
+  background: rgba(0, 0, 0, 0.15); /* Darker neutral background */
+  border-radius: 10px;
+  color: #d4dde1; /* Light gray for readability */
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.profile-details p:hover {
+  background: rgba(38, 166, 154, 0.1); /* Subtle teal tint */
+  color: #ffffff; /* White on hover */
+  box-shadow: 0 0 10px rgba(38, 166, 154, 0.3); /* Teal glow */
+}
+
+/* Table Box */
+.table-box {
+  overflow-x: auto;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06); /* Light neutral background */
+  padding: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  animation: slideUp 1s ease;
+}
+
+.table-box table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 1rem;
+  color: #d4dde1; /* Light gray text */
+}
+
+.table-box thead {
+  background: rgba(38, 166, 154, 0.15); /* Subtle teal background */
+  color: #ffffff; /* White for contrast */
+}
+
+.table-box th,
+.table-box td {
+  padding: 0.8rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12); /* Light border */
+}
+
+.table-box tbody tr:hover {
+  background-color: rgba(38, 166, 154, 0.05); /* Subtle teal highlight */
+  transition: background-color 0.3s ease;
+}
+
+/* Chart Container */
+.chart-container {
+  margin-top: 2rem;
+  background: rgba(0, 0, 0, 0.2); /* Dark neutral background */
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(38, 166, 154, 0.15); /* Subtle teal shadow */
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scrollbar */
+.table-box::-webkit-scrollbar {
+  height: 6px;
+}
+.table-box::-webkit-scrollbar-track {
+  background: transparent;
+}
+.table-box::-webkit-scrollbar-thumb {
+  background-color: #26a69a; /* Teal scrollbar */
+  border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .profile-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-icon {
+    margin-bottom: 1rem;
+  }
+
+  .profile-details p {
+    flex: 1 1 100%;
+  }
+
+  .dashboard-container h1,
+  .dashboard-container h2,
+  .dashboard-container h3 {
+    font-size: 1.4rem;
+  }
+
+  .table-box table {
+    font-size: 0.85rem;
+  }
+}

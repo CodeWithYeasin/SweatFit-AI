@@ -1,0 +1,142 @@
+.ai-trainer-container {
+  padding: 50px 10%;
+  text-align: center;
+  /* Using a gradient with the lightest peach (#FFD3AC) and a semi-transparent white for a soft background */
+  background: linear-gradient(135deg, rgb(255, 211, 172), rgb(242, 242, 242));
+  color: #000000;
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.page-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  letter-spacing: 3px;
+  /* Using the muted mustard yellow (#DBB06B) for the title to make it stand out */
+  color: #9f6303;
+  text-shadow: 1px 1px 4px rgb(241, 241, 241);
+}
+
+.page-subtitle {
+  font-size: 1.4rem;
+  /* Using the warm coral (#E39A78) for a subtle contrast with the title */
+  color: #d45216;
+  margin-bottom: 40px;
+  font-style: italic;
+}
+
+.boxes-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+  animation: fadeIn 1s ease-out;
+}
+
+.box {
+  /* Using the soft pinkish-peach (#FFB5AB) with slight transparency for the box background */
+  background: rgba(255, 181, 171, 0.7);
+  border: 2px solid #000000;
+  border-radius: 12px;
+  padding: 30px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.box-image {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  /* Using the warm coral (#E39A78) for the image border */
+  border: 3px solid #000000;
+  transition: transform 0.3s ease-in-out;
+}
+
+.box-image:hover {
+  transform: scale(1.05);
+}
+
+.box h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  /* Using the muted mustard yellow (#DBB06B) for the box heading */
+  color: #000000;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.trabtn {
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.trabtn-primary {
+  /* Using the warm coral (#E39A78) for the button background */
+  background: #973305;
+  color: white;
+}
+
+.trabtn-primary:hover {
+  /* Darkening the warm coral slightly for the hover effect */
+  background: #D68A68;
+  transform: scale(1.05);
+}
+
+.trabtn-primary:active {
+  transform: scale(1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .boxes-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box {
+    width: 80%;
+  }
+
+  .page-title {
+    font-size: 2.5rem;
+  }
+
+  .page-subtitle {
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,91 @@
+/* General Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #a0522d; /* Warm brown */
+  color: white;
+  font-family: "Roboto", sans-serif;
+  box-shadow: 0 4px 6px rgb(0, 0, 0);
+}
+
+/* Logo */
+.logo span {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Nav Links */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f4f4f9; /* Light gray */
+  text-decoration: underline;
+}
+
+/* Profile Section */
+.profile-section {
+  display: flex;
+  align-items: center;
+}
+
+/* Profile Icon (used within button) */
+.profile-icon {
+  font-size: 24px; /* Slightly smaller when used in button */
+  color: #a0522d; /* Matches button text color */
+  transition: color 0.3s ease;
+}
+
+/* Login Button */
+.btn-login {
+  background: #f4f4f9;
+  color: #a0522d;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn-login:hover {
+  background: #e0e0e0;
+}
+
+/* Profile Button */
+.btn-profile {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between icon and text */
+  background: #f4f4f9;
+  color: #a0522d;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn-profile:hover {
+  background: #e0e0e0;
+}
+
+.btn-profile .profile-icon {
+  margin-right: 5px; /* Additional spacing between icon and text */
+}
+
+.btn-profile:hover .profile-icon {
+  color: #a0522d; /* Keeps icon color consistent on hover */
+}

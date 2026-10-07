@@ -1,0 +1,254 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main Container */
+.login-container {
+  background: 
+    url('https://c4.wallpaperflare.com/wallpaper/988/509/102/baki-hanma-anime-boys-muscled-legs-muscular-gym-rat-hd-wallpaper-preview.jpg') center/cover no-repeat;
+  background-size: cover;
+  background-position: center top;
+  animation: login-moveBg 10s infinite linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Anton', sans-serif;
+  color: #fff;
+}
+
+/* Animation for Vertical Moving Background */
+@keyframes login-moveBg {
+  0% { background-position: center top; }
+  50% { background-position: center center; }
+  100% { background-position: center bottom; }
+}
+
+/* Dark Overlay for Readability */
+.login-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.255); /* Dark overlay */
+  z-index: 1;
+}
+
+/* Login Box */
+.login-box {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  padding: 2.5rem;
+  width: 90%;
+  max-width: 450px;
+  min-width: 320px;
+  box-shadow: 0 4px 15px rgb(254, 254, 254);
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* Login Title and Subtitle */
+.login-title {
+  font-size: 26px;
+  color: #000000;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.login-subtitle {
+  font-size: 16px;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+/* Login Form */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Input Group */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.input-group label {
+  font-size: 14px;
+  color: #000000;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid  #7a4e35;
+  background:  #fffdfc84;
+  color: #000000;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.input-group input:focus {
+  border-color: #7a4e35; /* Warm brown accent */
+  box-shadow: 0 0 8px rgba(122, 78, 53, 0.3);
+}
+
+.input-group input::placeholder {
+  color: #888;
+}
+
+/* Submit Button */
+.login-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  background: #7a4e35; /* Solid warm brown */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.login-btn:hover {
+  background: #5f3b27; /* Darker brown on hover */
+  transform: translateY(-2px);
+}
+
+/* Login Options */
+.login-options {
+  margin-top: 20px;
+}
+
+/* OR Separator */
+.login-or {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 20px 0;
+  position: relative;
+}
+
+.login-or::before,
+.login-or::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 30%;
+  height: 1px;
+  background: #000000;
+}
+
+.login-or::before {
+  left: 0;
+}
+
+.login-or::after {
+  right: 0;
+}
+
+/* Social Login */
+.social-login {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease-in-out;
+}
+
+.social-btn.google {
+  background: #7a4e35;
+}
+
+.social-btn.google:hover {
+  background: #471a01;
+}
+
+.social-btn i {
+  font-size: 18px;
+}
+
+/* Toggle Link */
+.login-toggle {
+  margin-top: 20px;
+  color: #000000;
+  font-size: 14px;
+}
+
+.toggle-link {
+  background: none;
+  border: 1px solid #7a4e35;
+  padding: 8px 15px;
+  color: #000000;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.toggle-link:hover {
+  background: #7a4e35;
+  color: #010000;
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+  .login-box {
+    width: 95%;
+    min-width: 280px;
+    padding: 1.5rem;
+  }
+
+  .login-title {
+    font-size: 22px;
+  }
+
+  .login-subtitle {
+    font-size: 14px;
+  }
+
+  .input-group input {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+
+  .login-btn {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .social-btn {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+}
