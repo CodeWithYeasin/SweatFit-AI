@@ -273,7 +273,9 @@ sweatfitai/
 ### ⭐ If you like this project, give it a star!
 
 **Made with ❤️ and 💪 for CSE 299 at North South University**
+## License
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-orange.svg)](LICENSE)
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:2ECC71,100:A0522D&height=120&section=footer" width="100%" />
 
 </div>
